@@ -14,10 +14,13 @@ print(f"""
                 Klasaman
                 Sorong
             081247271277
-
+    ----------------------------------       
     {tanggal} {waktu}   KSR : {namaKasir}
+    ----------------------------------
 """)
 
+totalBelanja = 0
+jumlahBelanja = 0
 tambahBarang = 'y'
 while('y' in tambahBarang):
 
@@ -51,4 +54,16 @@ Total Belanja   : Rp.   {totalBelanja}
 =================================
 """)
 
-print("Terima kasih, silahkan datang kembali :)")
+# Pembayaran
+pembayaran = int(input("Tunai: "))
+print(f"Tunai  : Rp.    {pembayaran:,}")
+kembalian = pembayaran - totalBelanja
+print("----------------------------")
+print(f"Kembalian   : Rp.   {kembalian:,}")
+
+# Tampilan akhir
+print("""
+========================================
+Terima kasih, silahkan datang kembali :)
+========================================
+""")
